@@ -46,7 +46,7 @@ const chartOptions = {
       borderWidth: 1,
       displayColors: false,
       callbacks: {
-        label: function(context: any) {
+        label: function (context: any) {
           return '$' + context.parsed.y
         }
       }

@@ -62,7 +62,7 @@ const handleSignIn = () => {
           <Link href="#" class="text-base font-medium text-primary underline">Forgot Password?</Link>
         </div>
 
-        <Button type="submit" size="lg" className="rounded-[10px] w-full">Sign in</Button>
+        <Button type="submit" size="lg" className="rounded-[10px] w-full disabled:opacity-50" :disabled="form.processing">{{ form.processing ? 'Signing in...' : 'Sign in' }}</Button>
       </form>
     </div>
   </div>

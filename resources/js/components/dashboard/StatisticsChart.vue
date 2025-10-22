@@ -98,7 +98,7 @@ const chartOptions = {
         color: '#667085',
         stepSize: 200,
         padding: 12,
-        callback: function(value: any) {
+        callback: function (value: any) {
           return value.toLocaleString()
         }
       }
