@@ -5,7 +5,7 @@ const props = defineProps({
 </script>
 
 <template>
-    <svg :class="className" viewBox="0 0 153 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg :class="props.className" viewBox="0 0 153 39" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path
             d="M74.3254 3.72937H68.5042C68.3401 3.72937 68.207 3.85911 68.207 4.01916V35.9775C68.207 36.1375 68.3401 36.2673 68.5042 36.2673H74.3254C74.4895 36.2673 74.6225 36.1375 74.6225 35.9775V4.01916C74.6225 3.85911 74.4895 3.72937 74.3254 3.72937Z"
             fill="#465FFF" />

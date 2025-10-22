@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import Input from '@/Components/ui/Input.vue'
-import Button from '@/Components/ui/Button.vue'
-import Checkbox from '@/Components/ui/CheckBox.vue'
-import Logo from '@/Components/icons/Logo.vue'
-import EyeIcon from '@/Components/icons/Eye.vue'
+import Input from '@/components/ui/Input.vue'
+import Button from '@/components/ui/Button.vue'
+import Checkbox from '@/components/ui/CheckBox.vue'
+import Logo from '@/components/icons/Logo.vue'
+import EyeIcon from '@/components/icons/Eye.vue'
 import { Link, useForm } from '@inertiajs/vue3'
 
 const showPassword = ref(false)

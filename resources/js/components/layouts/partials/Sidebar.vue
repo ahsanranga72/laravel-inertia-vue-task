@@ -5,8 +5,8 @@ import CalendarIcon from '@/components/icons/Calendar.vue'
 import UserIcon from '@/components/icons/User.vue'
 import ChatIcon from '@/components/icons/Chat.vue'
 
-const sidebarExpanded = ref(true)
 const dashboardExpanded = ref(true)
+
 </script>
 
 <template lang="">
