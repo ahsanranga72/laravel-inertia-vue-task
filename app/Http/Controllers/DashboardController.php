@@ -7,8 +7,11 @@ use Inertia\Inertia;
 
 class DashboardController extends Controller
 {
-    public function dashboard()
+    public function index()
     {
-        return Inertia::render('dashboard/Dashboard');
+        $user = request()->user();
+        return Inertia::render('dashboard/Dashboard', [
+            'user' => $user->only('id', 'name', 'email')
+        ]);
     }
 }
