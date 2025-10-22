@@ -45,4 +45,31 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function roles()
+    {
+        return $this->belongsToMany(Role::class, 'role_user');
+    }
+
+    public function hasRole($roleSlug)
+    {
+        return $this->roles()->where('slug', $roleSlug)->exists();
+    }
+
+    public function hasPermission($permissionSlug)
+    {
+        return $this->roles()
+            ->whereHas('permissions', fn($q) => $q->where('slug', $permissionSlug))
+            ->exists();
+    }
+
+    public function assignRole($role)
+    {
+        return $this->roles()->attach($role);
+    }
+
+    public function syncRoles(array $roles)
+    {
+        return $this->roles()->sync($roles);
+    }
 }
