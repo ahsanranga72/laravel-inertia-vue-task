@@ -8,23 +8,20 @@ const props = defineProps({
   type: { type: String, default: 'text' },
   placeholder: { type: String, default: '' },
   error: { type: String, default: '' },
-  className: { type: String, default: '' }
+  className: { type: String, default: '' },
+  autocomplete: { type: String, default: '' },
+  required: { type: Boolean, default: false }
 })
 const emit = defineEmits(['update:modelValue'])
 
-const inputId = computed(() => props.id ?? `input-${Math.random().toString(36).slice(2,8)}`)
+const inputId = computed(() => props.id ?? `input-${Math.random().toString(36).slice(2, 8)}`)
 </script>
 
 <template>
   <div class="w-full">
-    <input
-      :id="inputId"
-      :type="type"
-      :placeholder="placeholder"
-      :value="modelValue"
-      @input="$emit('update:modelValue', $event.target.value)"
-      :class="`w-full px-5 py-4 text-base text-gray-700 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors ${className}`"
-    />
+    <input :id="inputId" :type="type" :placeholder="placeholder" :value="modelValue"
+      @input="$emit('update:modelValue', $event.target.value)" :autocomplete="autocomplete" :required="required"
+      :class="`w-full px-5 py-4 text-base text-gray-700 bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-colors ${className}`" />
     <p v-if="error" class="text-sm text-red-500 mt-2">{{ error }}</p>
   </div>
 </template>

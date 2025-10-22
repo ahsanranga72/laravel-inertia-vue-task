@@ -26,7 +26,7 @@ class SigninController extends Controller
             return redirect()->intended(route('dashboard'));
         }
 
-        return back()->withErrors(['email' => 'Invalid credentials'])->onlyInput('email');
+        return back()->withErrors(['message' => 'Invalid credentials'])->onlyInput('email');
     }
 
     public function logout(Request $request)

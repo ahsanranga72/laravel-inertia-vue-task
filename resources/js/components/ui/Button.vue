@@ -3,9 +3,9 @@ import { computed } from 'vue'
 import { type PropType } from 'vue'
 
 const props = defineProps({
-  type: { type: String as PropType<'button'|'submit'|'reset'>, default: 'button' },
-  variant: { type: String as PropType<'primary'|'ghost'|'outline'>, default: 'primary' },
-  size: { type: String as PropType<'sm'|'md'|'lg'>, default: 'md' },
+  type: { type: String as PropType<'button' | 'submit' | 'reset'>, default: 'button' },
+  variant: { type: String as PropType<'primary' | 'ghost' | 'outline'>, default: 'primary' },
+  size: { type: String as PropType<'sm' | 'md' | 'lg'>, default: 'md' },
   disabled: { type: Boolean, default: false },
   className: { type: String, default: '' }
 })
